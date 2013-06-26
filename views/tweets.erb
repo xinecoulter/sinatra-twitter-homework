@@ -1,0 +1,10 @@
+<%#  @my_tweets.each do |tweet| %>
+<%#    tweet[:text]
+<%#  end %>
+<h1>Enter a Twitter username</h1>
+<form action="/tweets/:username" method="post">
+  <input type="text" name="username" autofocus>
+  <button>Get tweets!</button>
+</form>
+
+
