@@ -46,10 +46,6 @@ get '/tweets/:username' do
   # This queries Twitter's API and asks for the most recent Tweets from a user
   # The tweets are stored in an Array called @my_tweets
   @my_tweets = Twitter.user_timeline(@username)
-
-  # @new_username = params[:new_username]
-
-  # The following 3 lines will output the text from each tweet from a user
   erb :tweets
 end
 

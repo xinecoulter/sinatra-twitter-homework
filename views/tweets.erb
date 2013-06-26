@@ -5,8 +5,9 @@
   <button>Get tweets!</button>
 </form>
 
+<%# The following 3 lines will output the text from each tweet from a user%>
 <% @my_tweets.each do |tweet| %>
   <ul>
-    <li><%= tweet[:text] %></li>
+    <li><a href=""><%= tweet[:text] %></a></li>
   </ul>
 <% end %>
