@@ -2,9 +2,14 @@
 <%#    tweet[:text]
 <%#  end %>
 <h1>Enter a Twitter username</h1>
+
 <form action="/tweets/:username" method="post">
   <input type="text" name="username" autofocus>
   <button>Get tweets!</button>
 </form>
 
-
+<% @my_tweets.each do |tweet| %>
+  <ul>
+    <li><%= tweet[:text] %></li>
+  </ul>
+<% end %>
