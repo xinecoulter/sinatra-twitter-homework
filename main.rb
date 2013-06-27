@@ -50,6 +50,9 @@ get '/tweets/:username' do
   # The tweets are stored in an Array called @my_tweets
   @my_tweets = Twitter.user_timeline(@username)
 
+  ### Still need to be able to show images if image is included in tweet
+  ### Still need to figure out how to make username parameter optional
+
   user_info = Twitter.user(@username)
   @name = user_info[:name]
   @twitter_name = user_info[:screen_name]
