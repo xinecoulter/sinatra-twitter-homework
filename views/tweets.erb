@@ -1,6 +1,6 @@
 <h1>Enter a Twitter username</h1>
 
-<form action="/tweets/<%= :username %>" method="post">
+<form action="/tweets/:username" method="post">
   <input type="text" name="new_username" autofocus>
   <button>Get tweets!</button>
 </form>
@@ -8,6 +8,7 @@
 <%# The following 3 lines will output the text from each tweet from a user%>
 <% @my_tweets.each do |tweet| %>
   <ul>
-    <li><a href=""><%= tweet[:text] %></a></li>
+    <li><a href="https://twitter.com/<%= @username %>/status/<%= tweet[:id] %>"><%= tweet[:text] %></a></li>
   </ul>
 <% end %>
+
