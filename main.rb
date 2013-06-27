@@ -38,6 +38,9 @@ configure do
   end
 end
 
+get '/about_me' do
+  erb :about_me
+end
 
 get '/tweets/:username' do
   # This gets the username from the params hash
