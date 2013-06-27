@@ -5,6 +5,15 @@
   <button>Get tweets!</button>
 </form>
 
+
+<h3>Name: <%= @name %></h3>
+<h3>Twitter Name: @<%= @twitter_name %></h3>
+<h3>Location: <%= @location %></h3>
+<h3>Description: <%= @description %></h3>
+<h3>Number of Followers: <%= @followers %></h3>
+<h3>Number of Twitter Users <%=  @name %> is Following: <%= @following %></h3>
+<h3>Website: <a href="<% @website %>"><%= @website %></a></h3>
+
 <%# The following 3 lines will output the text from each tweet from a user%>
 <% @my_tweets.each do |tweet| %>
   <ul>

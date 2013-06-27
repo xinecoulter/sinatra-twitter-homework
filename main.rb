@@ -46,6 +46,15 @@ get '/tweets/:username' do
   # This queries Twitter's API and asks for the most recent Tweets from a user
   # The tweets are stored in an Array called @my_tweets
   @my_tweets = Twitter.user_timeline(@username)
+
+  user_info = Twitter.user(@username)
+  @name = user_info[:name]
+  @twitter_name = user_info[:screen_name]
+  @location = user_info[:location]
+  @description = user_info[:description]
+  @followers = user_info[:followers_count]
+  @following = user_info[:following_count]
+  @website = user_info[:url]
   erb :tweets
 end
 
